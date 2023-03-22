@@ -14,28 +14,28 @@
 
 <p>ajan:Agent <br>
  &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;The AJAN Agent type&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;Agent&quot; .</p>
 
 <p>ajan:This <br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Pointer in the AKB of an agent to its uri&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;This&quot; .</p>
 
 <p>ajan:Template <br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;The AJAN Template class&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;Template&quot; .</p>
 
 <p>ajan:AgentTemplate<br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;The class indicating an AJAN Agent Template to initiate single agents&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;AgentTemplate&quot; ;<br>
@@ -43,49 +43,49 @@
 
 <p>ajan:AgentInitialisation<br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;The RDF:type to indicate an AJAN init message, which points to the wanted Agent Template and the agent ID to be used&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;AgentInitialisation&quot; .</p>
 
 <p>ajan:Knowledge <br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Defines a single AJAN RDF repository&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;Knowledge&quot; .</p>
 
 <p>ajan:Event <br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Defines a AJAN Event&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;Event&quot; .</p>
 
 <p>ajan:Endpoint <br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Defines a AJAN Ednpoint, or a Agent HTTP interface&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;Event&quot; .</p>
 
 <p>ajan:Behavior <br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Defines a AJAN Behavior, which acts like a wrapper for SPARQL-BTs within an Agent Template and is triggerd by a Event&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;Behavior&quot; .</p>
 
 <p>ajan:InitialBehavior <br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Defines a AJAN Behavior, which is executed by the agent directly after its creation&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;Behavior&quot; .</p>
 
 <p>ajan:FinalBehavior <br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Defines a AJAN Behavior, which is executed by the agent right after its deletion&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;Behavior&quot; .</p>
@@ -95,7 +95,7 @@
 
 <p>ajan:AgentKnowledge <br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;The AKB or agent knowledge base of a single agent&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;AgentKnowledge&quot; ;<br>
@@ -103,7 +103,7 @@
 
 <p>ajan:ExecutionKnowledge <br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;The EKB or execution knowledge base of a single initiated SPARQL-BT&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;ExecutionKnowledge&quot; ;<br>
@@ -111,7 +111,7 @@
 
 <p>ajan:BehaviorKnowledge <br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;The Behaviors repository of an AJAN service, which stores all available SPARQL-BT definitions&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;BehaviorKnowledge&quot; ;<br>
@@ -119,7 +119,7 @@
 
 <p>ajan:DomainKnowledge <br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;The Domain repository of an AJAN service, which stores all domain relevant informations, e.g., mappings, to which all initiated agents have access&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;DomainKnowledge&quot; ;<br>
@@ -127,7 +127,7 @@
 
 <p>ajan:ServiceKnowledge <br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;The Service repository of an AJAN service, which stores all known service and action definitions&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;ServiceKnowledge&quot; ;<br>
@@ -135,7 +135,7 @@
 
 <p>ajan:TemplateKnowledge<br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;The Teamplates repository of an AJAN service, which stores all available Agent Teamplates&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;TemplateKnowledge&quot; ;<br>
@@ -143,7 +143,7 @@
 
 <p>ajan:ManagedTDB<br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;If a AKB is managed by another repository, e.g. with credentials and so on, this class indicates that&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;ManagedTDB&quot; .</p>
@@ -153,7 +153,7 @@
 
 <p>ajan:ModelEvent<br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;A RDF-graph based AJAN Event, which triggers SPARQL-BTs&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;ModelEvent&quot; ;<br>
@@ -161,7 +161,7 @@
 
 <p>ajan:MappingEvent<br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;A AJAN Event which stores event information not as a RDF-graph but as a string stream to map, e.g. JSON into RDF&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;MappingEvent&quot; ;<br>
@@ -169,7 +169,7 @@
 
 <p>ajan:ModelQueueEvent<br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;An AJAN event based on an RDF graph that can contain multiple ModelEvents to prevent an event from being overwritten by a new one while the old one is still being processed&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;ModelQueueEvent&quot; ;<br>
@@ -177,7 +177,7 @@
 
 <p>ajan:MappingQueueEvent<br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;An AJAN event based on an RDF graph that can contain multiple MappingEvent to prevent an event from being overwritten by a new one while the old one is still being processed&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;MappingQueueEvent&quot; ;<br>
@@ -185,7 +185,7 @@
 
 <p>ajan:Goal<br>
   &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
-  &nbsp;&nbsp;&nbsp;owl:Class ;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;A AJAN Goal, which triggers SPARQL-BTs like AJAN Events but has additional pre- and postconditions&quot; ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:label &quot;Goal&quot; ;<br>
