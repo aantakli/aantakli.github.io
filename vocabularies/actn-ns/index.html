@@ -1,1 +1,198 @@
-Hallo World
+<p>@base &lt;https://github.com/aantakli/aantakli.github.io/edit/main/vocabularies/actn-ns/index.html&gt; .<br>
+@prefix : &lt;https://github.com/aantakli/aantakli.github.io/edit/main/vocabularies/actn-ns/index.html&gt; .<br>
+@prefix actn: &lt;http://www.ajan-agents.de/vocabularies/actn-ns/#&gt; .<br>
+@prefix ajan: &lt;http://www.ajan-agents.de/vocabularies/ajan-ns/#&gt; .<br>
+@prefix bt: &lt;http://www.ajan-agents.de/vocabularies/behavior/bt-ns/#&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .<br>
+@prefix xml: &lt;http://www.w3.org/XML/1998/namespace&gt; .<br>
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix http: &lt;http://www.w3.org/2006/http#&gt; .<br>
+@prefix http-hdr: &lt;http://www.w3.org/2008/http-headers#&gt; .<br>
+@prefix http-mth: &lt;http://www.w3.org/2008/http-methods#&gt; .</p>
+
+<p># ---------------------------------------------------<br>
+# Action Classes<br>
+# ---------------------------------------------------</p>
+
+<p>actn:Action <br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;A AJAN Action&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;Action&quot; .</p>
+
+<p>actn:Communication <br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Specifies whether an action responds directly with the action result or asynchronously&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;Communication&quot; .</p>
+
+<p>actn:ServiceAction <br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;A AJAN Action which is executed in the agent LD-domain&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;ServiceAction&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:subClassOf actn:Action .</p>
+
+<p>actn:PluginAction <br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;A AJAN Action which is executed internally via a AJAN Plugin&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;PluginAction&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:subClassOf actn:Action .</p>
+
+<p>actn:Synchronous <br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;An Action which response directly with its result&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;Synchronous&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:subClassOf actn:Communication .</p>
+
+<p>actn:Asynchronous <br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;An Action which send its result asynchronously, the Action can therefore be aborted and has a RUNNING state&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;Asynchronous&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:subClassOf actn:Communication .</p>
+
+<p>actn:ActionVariable <br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;A Variable in the form of ?VARIABLE which indicates the same resource used in Consumables and Producibles&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;ActionVariable&quot; .</p>
+
+<p>actn:Consumable <br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;The preconditions of an Action or Goal represented as a SPARQL ASK query&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;Consumable&quot; .</p>
+
+<p>actn:Producible<br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;The postconditions of an Action or Goal represented as a SPARQL ASK query&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;Producible&quot; .</p>
+
+<p>actn:Binding<br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Used in ServiceActions to define the HTTP binding to communicate with the action LD-resource in the agents domain&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;Producible&quot; .</p>
+
+<p>actn:Payload<br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdfs:Class ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owl:Class ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;The binding payload for the HTTP request, defined as a SPARQL CONSTRUCT query&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;Producible&quot; .</p>
+
+<p># ---------------------------------------------------<br>
+# Action Properties<br>
+# ---------------------------------------------------</p>
+
+<p>actn:communication<br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdf:Property ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Points to the communication type of that action&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;communication&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:domain actn:Action ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:range actn:Communication .</p>
+
+<p>actn:category<br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdf:Property ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Points to a user specified category of that action&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;category&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:domain actn:Action ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:range rdf:Resource .</p>
+
+<p>actn:variables<br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdf:Property ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Points to a rdf:List of ActionVariables&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;variables&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:domain actn:Action ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:range rdf:List .</p>
+
+<p>actn:consumes<br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdf:Property ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Points to the Consumable of that action&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;consumes&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:domain actn:Action ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ajan:Goal ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:range actn:Consumable .</p>
+
+<p>actn:produces<br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdf:Property ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Points to the Producible of that action&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;produces&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:domain actn:Action ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ajan:Goal ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:range actn:Producible .</p>
+
+<p>actn:runBinding<br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdf:Property ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Points to the HTTP binding to run that action in the agent domain&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;runBinding&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:domain actn:Action ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:range actn:Binding .</p>
+
+<p>actn:abortBinding<br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdf:Property ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Points to the HTTP binding to abort that action in the agent domain&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;abortBinding&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:domain actn:Action ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:range actn:Binding .</p>
+
+<p>actn:sparql <br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdf:Property ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Points the a SPARQL Query&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;sparql &quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:domain actn:Payload ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actn:Consumable ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actn:Producible ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:range xsd:string .</p>
+
+<p>actn:varName<br>
+ &nbsp;&nbsp;&nbsp;rdf:type rdf:Property ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Points to the variable name of a Action Variable&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:label &quot;varName&quot; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;https://github.com/aantakli/AJAN-service/wiki/AJAN-Actions&gt; ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:domain actn:ActionVariable ;<br>
+ &nbsp;&nbsp;&nbsp;rdfs:range xsd:string .</p>
