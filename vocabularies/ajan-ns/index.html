@@ -206,6 +206,14 @@
   &nbsp;&nbsp;&nbsp;rdfs:domain ajan:AgentTemplate ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:range rdf:Resource .</p>
 
+<p>ajan:role<br>
+  &nbsp;&nbsp;&nbsp;rdf:type rdf:Property ;<br>
+  &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Points to a URI which defines the role of the initialized agent using given template&quot; ;<br>
+  &nbsp;&nbsp;&nbsp;rdfs:label &quot;agentInitKnowledge&quot; ;<br>
+  &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
+  &nbsp;&nbsp;&nbsp;rdfs:domain ajan:AgentTemplate ;<br>
+  &nbsp;&nbsp;&nbsp;rdfs:range xsd:anyURI .</p>
+
 <p>ajan:endpoint<br>
   &nbsp;&nbsp;&nbsp;rdf:type rdf:Property ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Points to a AJAN Endpoint&quot; ;<br>
@@ -289,7 +297,7 @@
   &nbsp;&nbsp;&nbsp;rdfs:isDefinedBy : ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:domain ajan:AgentInitialisation ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:range xsd:string .</p>
- 
+
 <p>ajan:managedTDB<br>
   &nbsp;&nbsp;&nbsp;rdf:type rdf:Property ;<br>
   &nbsp;&nbsp;&nbsp;rdfs:comment &quot;Indicates within an AJAN initialisation message if the AKB is externally managed&quot; ;<br>
